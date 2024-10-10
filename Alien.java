@@ -9,9 +9,9 @@ public class Alien {
     private Ellipse leftEye;
     private Ellipse rightEye;
 
-    public Alien(Pane root) {
+    public Alien(Pane alienPane) {
         this.setupAlien();
-        root.getChildren().addAll(this.face, this.leftEye, this.rightEye);
+        alienPane.getChildren().addAll(this.face, this.leftEye, this.rightEye);
         this.setXLoc(Constants.START_X_OFFSET);
     }
 
