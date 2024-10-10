@@ -10,18 +10,18 @@ public class Alien {
     private Ellipse rightEye;
 
     public Alien(Pane alienPane) {
-        this.setupAlien();
-        alienPane.getChildren().addAll(this.face, this.leftEye, this.rightEye);
+        this.setupAlien(alienPane);
         this.setXLoc(Constants.START_X_OFFSET);
     }
 
-    private void setupAlien(){
+    private void setupAlien(Pane alienPane){
         this.face = new Ellipse(0, Constants.FACE_Y, Constants.FACE_RAD_X, Constants.FACE_RAD_Y);
         this.face.setFill(Color.CHARTREUSE);
         this.leftEye = new Ellipse(0, Constants.EYE_Y, Constants.EYE_RAD_X, Constants.EYE_RAD_Y);
         this.leftEye.setFill(Color.BLACK);
         this.rightEye = new Ellipse(0, Constants.EYE_Y, Constants.EYE_RAD_X, Constants.EYE_RAD_Y);
         this.rightEye.setFill(Color.BLACK);
+        alienPane.getChildren().addAll(this.face, this.leftEye, this.rightEye);
     }
 
     public void moveRight() {
